@@ -8,12 +8,21 @@
     </head>
     <body>
         <div id="main-container">
+
             <div id="generate-section">
                 <h1 id="title">Generate a<br><span id="green-title">random password</span></h1>
                 <p id="title-p">Never use an insecure password again.</p>
+                <div class="divider"></div>
+                <div id="password-length-container">
+                    <div id="password-input-container">
+                        <p id="length-p">Password length:</p>
+                        <input id="pw-length" type="number" placeholder="" minlength="1" maxlength="30">
+                    </div>
+
+                    <aside id="pw-info">(1 - 30 characters long)</aside>
+                </div>
                 <button id="btn" onclick="printPasswords()">Generate passwords</button>
             </div>
-            <div id="divider"></div>
             <div id="password-section">
                 <p id="pw-el1" class="pw-display"></p>
                 <p id="pw-el2" class="pw-display"></p>

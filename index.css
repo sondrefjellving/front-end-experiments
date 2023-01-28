@@ -8,9 +8,10 @@ body {
 
 #main-container {
     width: 550px;
-    height: 550px;
+    height: 700px;
     background-color: #1F2937;
     margin: 50px auto;
+    border-radius: 10px;
 }
 
 /* ================ FIRST SECTION ================== */
@@ -30,8 +31,40 @@ body {
     color: #4ADF86
 }
 
-#title-p {
+#title-p, #length-p, #pw-info{
     color: #D5D4D8;
+}
+
+#title-p {
+    margin-bottom: 50px
+}
+
+#password-length-container {
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#password-input-container {
+    display: flex;
+    align-items: center;
+}
+
+#pw-length {
+    text-align: center;
+    line-height: 30px;
+    font-weight: 700;
+    margin: 0 0 0 10px;
+    width: 50px;
+    border: none;
+    border-radius: 4px;
+    background-color: #273549;
+    color: #4ADF86;
+}
+
+#pw-info {
+    font-size: 12px;
 }
 
 #btn {
@@ -45,9 +78,8 @@ body {
 }
 
 
-#divider {
+.divider {
     height: 1px;
-    margin: 0 52px;
     border-bottom: 2px solid #2F3E53;
 }
 
@@ -56,14 +88,15 @@ body {
 #password-section {
     padding: 35px 52px 35px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .pw-display {
+    margin: 10px 0;
     border-radius: 5px;
     background-color: #273549;
     height: 40px;
-    width: 210px;
+    width: 420px;
     text-align: center;
     line-height: 40px;
     color: #55F991;

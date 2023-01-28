@@ -13,7 +13,14 @@ function resetPasswords() {
 
 function printPasswords() {
     resetPasswords()
-    generatePasswords(15)
+    let pwLength = document.getElementById("pw-length").value;
+    if (checkPWLength(pwLength)) {
+        generatePasswords(pwLength)
+        document.getElementById("pw-length").style.border = "1px solid #273549"
+    } else {
+        document.getElementById("pw-length").style.border = "1px solid #E11D48"
+    }
+
     pwContainer1.textContent = password1
     pwContainer2.textContent = password2
 }
@@ -31,4 +38,8 @@ function getRandomCharacter() {
 
 function getRandomNumber() {
     return Math.floor( Math.random()*characters.length )
+}
+
+function checkPWLength(pwLength) { // returns true if length is good
+    return (pwLength > 1 && pwLength <= 30)
 }
